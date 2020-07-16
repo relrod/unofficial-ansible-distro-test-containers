@@ -8,3 +8,10 @@ env:
 
 script:
   - ./build-container.sh $IMAGE
+
+notifications:
+  webhooks:
+    on_success: change
+    on_failure: change
+    urls:
+      - https://sl.da.gd/travisci?channel=%23relrodtest
