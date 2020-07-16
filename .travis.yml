@@ -1,0 +1,10 @@
+sudo: required
+
+services:
+  - docker
+
+env:
+  - IMAGE=alpine312-test-container
+
+script:
+  - ./build-container.sh $IMAGE
